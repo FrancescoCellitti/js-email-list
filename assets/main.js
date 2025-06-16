@@ -1,5 +1,8 @@
 const liEl = document.querySelectorAll('li')
 const ulEl = document.querySelector('ul')
+const buttonEl = document.querySelector('button')
+
+
 function generateEmail() {
     for (let i = 0; i < 10; i++) {
         fetch("https://flynn.boolean.careers/exercises/api/random/mail")
@@ -19,4 +22,6 @@ function generateEmail() {
 
 generateEmail()
 
-console.log()
+buttonEl.addEventListener( 'click', ()=>{
+    location.reload();
+})
