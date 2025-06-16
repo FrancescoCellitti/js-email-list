@@ -23,5 +23,5 @@ function generateEmail() {
 generateEmail()
 
 buttonEl.addEventListener( 'click', ()=>{
-    location.reload();
+    generateEmail()    
 })
