@@ -1,4 +1,4 @@
-const liEl = document.querySelector('li')
+const liEl = document.querySelectorAll('li')
 const ulEl = document.querySelector('ul')
 function generateEmail() {
     for (let i = 0; i < 10; i++) {
@@ -6,10 +6,9 @@ function generateEmail() {
 
             .then(response => response.json())
             .then(email => {
-                const li = document.createElement('li');
-                li.innerText = email.response
+                liEl[i].innerText = email.response
                 console.log(email);
-                ulEl.appendChild(li)
+                
 
             })
             .catch(error => {
